@@ -119,25 +119,34 @@ while loop:
             tambahdata = input("Ingin Menambahkan Lagi ? (y/n) ")
             if tambahdata == "n":
                 break
+\
 [Gambar1.png](Screenshot/2022-12-14.png)
+\
     elif menu == "2":
         instanceUPB.tampil()
         print(" ")
+\
 [gambar2.png](Screenshot/2022-12-14%20(1).png)
+\
     elif menu == "3":
         print(tabulate(instanceUPB.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid'))
         nama = input("Pilih Data Nama Yang Ingin Dihapus : ")
         instanceUPB.hapus(nama)
+\
 [gambar3.png](Screenshot/2022-12-14%20(3).png)
+\
     elif menu == "4":
         print(tabulate(instanceUPB.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid'))
         nama = input("Masukan Nama Yang Ingin Di Edit : ")
         print(" ")
         instanceUPB.ubah(nama)
+\
 [gambar4](Screenshot/2022-12-14%20(4).png)
+\
     elif menu == "0":
         print("Terima Kasih Telah Menggunakan Program Ini")
         print("Thank You")
         loop = False
-
+\
 [gambar5.png](Screenshot/2022-12-16.png)
+\
