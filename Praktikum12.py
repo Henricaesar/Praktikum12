@@ -1,4 +1,3 @@
-# praktikum12
 from tabulate import tabulate
 class UPB :
     def __init__(self):
@@ -11,8 +10,8 @@ class UPB :
         'Nilai UAS':[],
         'Nilai Akhir':[]
     }
-# Def Tambah
-   ''' def tambah (self,no):
+
+    def tambah (self,no):
         print("Silahkan Input Data Anda  ")
         nama = input("Masukan Nama Mahasiswa : ")
         nim = input("Masukan Nim Mahasiswa : ")
@@ -28,13 +27,13 @@ class UPB :
         self.datamahasiswa['Nilai UTS'].append(uts)
         self.datamahasiswa['Nilai UAS'].append(uas)
         self.datamahasiswa['Nilai Akhir'].append(nilaiAkhir)
-        print("Succes") '''
-# Def Tampil
-    ''' def tampil(self):
+        print("Succes")
+#Tampil
+    def tampil(self):
         print('Tampilan Data Nilai Mahasiswa')
-        print(tabulate(self.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid')) '''
-# Def Hapus  
-    ''' def hapus(self,nama):
+        print(tabulate(self.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid'))
+    
+    def hapus(self,nama):
         if nama in self.datamahasiswa["Nama"]:
             namaIndex =self.datamahasiswa['Nama'].index(nama)
             del self.datamahasiswa['No'][namaIndex]
@@ -46,10 +45,10 @@ class UPB :
             del self.datamahasiswa['Nilai Akhir'][namaIndex]
             print("Data Was Deleted")
         else:
-            print("Data Was Not Found") '''
+            print("Data Was Not Found")
     
-# Def Ubah    
-   ''' def ubah(self, nama):
+    
+    def ubah(self, nama):
            # cek jika ada nama tersebut di dataMahasiswa
            if nama in self.datamahasiswa['Nama']:
                # cari posisi indexnya lalu disimpan di nimIndex
@@ -91,10 +90,10 @@ class UPB :
                    print("Perubahan data berhasil di simpan")
                    break
            else:
-               print("Data tidak ditemukan") '''
+               print("Data tidak ditemukan")
 no = 0
 instanceUPB = UPB()
-# Menggunakan Instance untuk class UPB agar dapat dipanggil kembali                   
+                    
 loop = True
 print("===================================================================")
 print("             Selamat Datang Di Aplikasi Input Nilai Mahasiswa      ")
@@ -119,25 +118,19 @@ while loop:
             tambahdata = input("Ingin Menambahkan Lagi ? (y/n) ")
             if tambahdata == "n":
                 break
-[Gambar1.png](Screenshot/2022-12-14.png)
     elif menu == "2":
         instanceUPB.tampil()
         print(" ")
-[gambar2.png](Screenshot/2022-12-14%20(1).png)
     elif menu == "3":
         print(tabulate(instanceUPB.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid'))
         nama = input("Pilih Data Nama Yang Ingin Dihapus : ")
         instanceUPB.hapus(nama)
-[gambar3.png](Screenshot/2022-12-14%20(3).png)
     elif menu == "4":
         print(tabulate(instanceUPB.datamahasiswa,headers=['No','Nama','NIM','Nilai Tugas','Nilai UTS','Nilai UAS','Nilai Akhir'],tablefmt='fancy_grid'))
         nama = input("Masukan Nama Yang Ingin Di Edit : ")
         print(" ")
         instanceUPB.ubah(nama)
-[gambar4](Screenshot/2022-12-14%20(4).png)
     elif menu == "0":
         print("Terima Kasih Telah Menggunakan Program Ini")
         print("Thank You")
         loop = False
-
-[gambar5.png](Screenshot/2022-12-16.png)
